@@ -18,6 +18,8 @@ ADD_LIBRARY(parport SHARED parport.cc)
 ADD_EXECUTABLE(parport_test parport_test.cc)
 TARGET_LINK_LIBRARIES(parport_test parport)
 
+ADD_EXECUTABLE(parport_manip parport_manip.c)
+
 INSTALL(TARGETS parport
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib)
