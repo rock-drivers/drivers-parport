@@ -13,7 +13,7 @@ private:
 public:
   ParportDriver();
 
-  bool open(std::string const& filename);
+  bool open(std::string const& filename, uint8_t default_state = 0);
   void close();
 
   bool setDataPin(unsigned pin);

@@ -9,7 +9,7 @@
 ParportDriver::ParportDriver() : fd(-1) {
 }
 
-bool ParportDriver::open(std::string const& filename) {
+bool ParportDriver::open(std::string const& filename, uint8_t default_state) {
   if ((fd = ::open(filename.c_str(), O_RDWR)) < 0) {
     perror("Could not open");
     return false;
@@ -31,7 +31,7 @@ bool ParportDriver::open(std::string const& filename) {
     return false;
   }
 
-  pins = 0;
+  pins = default_state;
   if (!writePins()) {
     ::close(fd);
     fd = -1;
