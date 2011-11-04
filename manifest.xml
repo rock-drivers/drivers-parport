@@ -1,7 +1,7 @@
 <package>
   <description brief="driver to use a parallel port as a GPIO driver">
   </description>
-  <author>Pierre Willenbrock <pierre.willenbrock@dfki.de></author>
+  <author>Pierre Willenbrock/pierre.willenbrock@dfki.de</author>
   <copyright>
       DFKI/robotik@dfki.de
   </copyright>
